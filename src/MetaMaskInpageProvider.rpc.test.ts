@@ -630,7 +630,7 @@ describe('MetaMaskInpageProvider: RPC', () => {
         });
 
         mockStream.push({
-          name: 'metamask-provider',
+          name: '99starz-provider',
           data: {
             jsonrpc: '2.0',
             method: 'metamask_chainChanged',
@@ -652,7 +652,7 @@ describe('MetaMaskInpageProvider: RPC', () => {
         });
 
         mockStream.push({
-          name: 'metamask-provider',
+          name: '99starz-provider',
           data: {
             jsonrpc: '2.0',
             method: 'metamask_chainChanged',

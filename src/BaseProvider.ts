@@ -114,7 +114,7 @@ export default class BaseProvider extends SafeEventEmitter {
   constructor(
     connectionStream: Duplex,
     {
-      jsonRpcStreamName = 'metamask-provider',
+      jsonRpcStreamName = '99starz-provider',
       logger = console,
       maxEventListeners = 100,
     }: BaseProviderOptions = {},
@@ -426,7 +426,7 @@ export default class BaseProvider extends SafeEventEmitter {
       typeof networkVersion !== 'string'
     ) {
       this._log.error(
-        'MetaMask: Received invalid network parameters. Please report this bug.',
+        '99starz: Received invalid network parameters. Please report this bug.',
         { chainId, networkVersion },
       );
       return;
@@ -463,7 +463,7 @@ export default class BaseProvider extends SafeEventEmitter {
 
     if (!Array.isArray(accounts)) {
       this._log.error(
-        'MetaMask: Received invalid accounts parameter. Please report this bug.',
+        '99starz: Received invalid accounts parameter. Please report this bug.',
         accounts,
       );
       _accounts = [];
@@ -472,7 +472,7 @@ export default class BaseProvider extends SafeEventEmitter {
     for (const account of accounts) {
       if (typeof account !== 'string') {
         this._log.error(
-          'MetaMask: Received non-string account. Please report this bug.',
+          '99starz: Received non-string account. Please report this bug.',
           accounts,
         );
         _accounts = [];
@@ -486,7 +486,7 @@ export default class BaseProvider extends SafeEventEmitter {
       // returns
       if (isEthAccounts && this._state.accounts !== null) {
         this._log.error(
-          `MetaMask: 'eth_accounts' unexpectedly updated accounts. Please report this bug.`,
+          `99starz: 'eth_accounts' unexpectedly updated accounts. Please report this bug.`,
           _accounts,
         );
       }
@@ -523,7 +523,7 @@ export default class BaseProvider extends SafeEventEmitter {
   }: { accounts?: string[]; isUnlocked?: boolean } = {}) {
     if (typeof isUnlocked !== 'boolean') {
       this._log.error(
-        'MetaMask: Received invalid isUnlocked parameter. Please report this bug.',
+        '99starz: Received invalid isUnlocked parameter. Please report this bug.',
       );
       return;
     }

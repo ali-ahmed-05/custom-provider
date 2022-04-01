@@ -67,7 +67,7 @@ export default class MetaMaskInpageProvider extends BaseProvider {
   /**
    * Indicating that this provider is a MetaMask provider.
    */
-  public readonly isMetaMask: true;
+  public readonly isStarzWallet: true;
 
   /**
    * @param connectionStream - A Node.js duplex stream
@@ -83,7 +83,7 @@ export default class MetaMaskInpageProvider extends BaseProvider {
   constructor(
     connectionStream: Duplex,
     {
-      jsonRpcStreamName = 'metamask-provider',
+      jsonRpcStreamName = '99starz-provider',
       logger = console,
       maxEventListeners = 100,
       shouldSendMetadata = true,
@@ -92,7 +92,7 @@ export default class MetaMaskInpageProvider extends BaseProvider {
     super(connectionStream, { jsonRpcStreamName, logger, maxEventListeners });
 
     this.networkVersion = null;
-    this.isMetaMask = true;
+    this.isStarzWallet = true;
 
     this._sendSync = this._sendSync.bind(this);
     this.enable = this.enable.bind(this);
